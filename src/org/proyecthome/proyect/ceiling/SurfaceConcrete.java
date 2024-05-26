@@ -6,6 +6,7 @@ import org.proyecthome.proyect.proyectcontruction.ProyectContructor;
 public class SurfaceConcrete extends ProyectContructor {
 
     private float height_space;
+    private CoatMortar coat = new CoatMortar();
 
     public SurfaceConcrete(float width_space, float long_space, float height_space) {
         super(width_space, long_space);
@@ -25,9 +26,9 @@ public class SurfaceConcrete extends ProyectContructor {
          con variable perfonmance*/
         float perfonmance;
         float volume;
-        CoatMortar coat = new CoatMortar();
+
         volume = getHeight_space() * getLong_space() * getWidth_space();
-        perfonmance = volume / coat.getPerfonmance();
+        perfonmance = volume / this.coat.getPerfonmance();
 
         return perfonmance;
     }
